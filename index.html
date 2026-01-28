@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salon Demo — Modern Hair Treatments</title>
+    <meta name="description" content="Salon demo website with services, gallery, reviews, map and WhatsApp booking." />
+
+    <link rel="stylesheet" href="salon.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="salon">
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="logo" href="#top">SWAY</a>
+
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Location</a>
+            </nav>
+
+            <a class="btn btn-primary" href="https://wa.me/918209428320?text=Hi%20I%20want%20an%20appointment"
+                target="_blank" rel="noopener">
+                Appointment
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero (like screenshot) -->
+    <main id="top" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <p class="kicker">Boutique salon &amp; style</p>
+                <h1>Modern Hair<br />Treatments</h1>
+                <p class="hero-sub">
+                    <span id="typewriter"></span>
+                </p>
+            </div>
+
+            <div class="hero-right">
+                <!-- replace this image later with your own -->
+                <img class="hero-img" src="images/hero1.jpg" alt="Salon model" />
+            </div>
+        </div>
+
+        <!-- Wavy bottom shape -->
+        <div class="wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+                <path d="M0,120 C240,200 480,40 720,110 C960,180 1200,80 1440,120 L1440,220 L0,220 Z"></path>
+            </svg>
+        </div>
+    </main>
+
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Services</h2>
+                <p>Popular services (demo). Pricing can be customized for any salon.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Haircut &amp; Styling</h3>
+                    <p>Trending cuts, blow-dry &amp; finish.</p>
+                    <span class="tag">From ₹399</span>
+                </div>
+
+                <div class="card">
+                    <h3>Hair Color</h3>
+                    <p>Global, highlights, balayage.</p>
+                    <span class="tag">From ₹999</span>
+                </div>
+
+                <div class="card">
+                    <h3>Hair Spa</h3>
+                    <p>Damage repair, smoothening care.</p>
+                    <span class="tag">From ₹799</span>
+                </div>
+
+                <div class="card">
+                    <h3>Facial &amp; Cleanup</h3>
+                    <p>Glow &amp; hydration treatments.</p>
+                    <span class="tag">From ₹499</span>
+                </div>
+
+                <div class="card">
+                    <h3>Bridal Makeup</h3>
+                    <p>Bridal packages &amp; trial available.</p>
+                    <span class="tag">From ₹4,999</span>
+                </div>
+
+                <div class="card">
+                    <h3>Manicure / Pedicure</h3>
+                    <p>Classic + spa options.</p>
+                    <span class="tag">From ₹499</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section alt">
+        <div class="container">
+            <div class="section-head">
+                <h2>Gallery</h2>
+                <p>Add your best 8–12 photos. This section sells the most.</p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/1.avif"
+                    alt="gallery">
+                <img src="images/2.jpg"
+                    alt="gallery">
+                <img src="images/3.jpg"
+                    alt="gallery">
+                <img src="images/4.jpeg"
+                    alt="gallery">
+                <img src="images/5.webp"
+                    alt="gallery">
+                <img src="images/6.webp"
+                    alt="gallery">
+                <img src="images/7.jpg"
+                    alt="gallery">
+                <img src="images/8.jpg"
+                    alt="gallery">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Reviews</h2>
+                <p>Short, believable reviews (demo).</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="review">
+                    <p class="stars">★★★★★</p>
+                    <p class="quote">“Super clean salon and great haircut. Staff is very polite.”</p>
+                    <p class="by">— Neha</p>
+                </div>
+                <div class="review">
+                    <p class="stars">★★★★★</p>
+                    <p class="quote">“Hair color looked premium. Exactly the shade I wanted.”</p>
+                    <p class="by">— Riya</p>
+                </div>
+                <div class="review">
+                    <p class="stars">★★★★★</p>
+                    <p class="quote">“Bridal makeup was flawless. Photos came out amazing.”</p>
+                    <p class="by">— Pooja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section alt">
+        <div class="container">
+            <div class="section-head">
+                <h2>Location &amp; Timings</h2>
+                <p>Map is included in the demo — client ko clear ho jata hai ki “map possible hai”.</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>SWAY Salon (Demo)</h3>
+                    <p class="muted">C-12, Main Road, Jaipur, Rajasthan</p>
+                    <p><b>Mon–Sun:</b> 10:00 AM – 08:00 PM</p>
+                    <div class="location-actions">
+                        <a class="btn btn-primary"
+                            href="https://wa.me/918209428320?text=Hi%20I%20want%20an%20appointment" target="_blank"
+                            rel="noopener">Book on WhatsApp</a>
+                        <a class="btn btn-outline" href="tel:+918209428320">Call</a>
+                    </div>
+                </div>
+
+                <div class="map">
+                    <!-- Demo map embed (you can replace later) -->
+                    <iframe title="Google Map" src="https://www.google.com/maps?q=Jaipur%20Rajasthan&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA (for YOU, selling) -->
+    <footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">SWAY Salon</p>
+      <p class="footer-muted">Premium haircuts • Color • Spa • Bridal styling</p>
+      <p class="footer-muted">C-12, Main Road, Jaipur, Rajasthan</p>
+    </div>
+
+    <div class="footer-actions">
+      <a class="btn btn-primary" href="https://wa.me/918209428320" target="_blank">Book on WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+918209428320">Call</a>
+    </div>
+  </div>
+
+  <p class="footer-copy">© <span id="year"></span> SWAY Salon. All rights reserved.</p>
+</footer>
+
+
+
+
+    <script>
+  const text = "Because you deserve to feel beautiful every single day. Premium haircuts, color, spa & bridal styling. Fast booking on WhatsApp.";
+  const speed = 50; // typing speed (ms)
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typewriter").textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  window.addEventListener("load", typeWriter);
+</script>
+
+</body>
+
+</html>
