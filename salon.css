@@ -515,3 +515,63 @@ h1{
   color: rgba(255,255,255,0.55);
   font-size: 12px;
 }
+/* LIGHTBOX */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.faq {
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+}
+
+.faq-item {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+}
+
+.faq-item h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #6f6862;
+  line-height: 1.6;
+}
+
+.section-divider{
+  border: none;
+}
