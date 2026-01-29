@@ -117,25 +117,57 @@
 
             <div class="gallery">
                 <img src="images/1.avif"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
                 <img src="images/2.jpg"
-                    alt="gallery">
+                   onclick="openLightbox(this.src)">
                 <img src="images/3.jpg"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
                 <img src="images/4.jpeg"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
                 <img src="images/5.webp"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
                 <img src="images/6.webp"
-                    alt="gallery">
+                   onclick="openLightbox(this.src)">
                 <img src="images/7.jpg"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
                 <img src="images/8.jpg"
-                    alt="gallery">
+                    onclick="openLightbox(this.src)">
             </div>
         </div>
     </section>
 
+<section class="section section-alt" id="faqs">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Quick answers to common questions.</p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h4>Do I need to book an appointment in advance?</h4>
+        <p>Yes, we recommend booking in advance to avoid waiting time. Walk-ins are subject to availability.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do you provide bridal makeup trials?</h4>
+        <p>Yes, bridal packages include trial sessions. Please contact us for details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What payment methods do you accept?</h4>
+        <p>We accept cash, UPI, and online payments.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I reschedule my appointment?</h4>
+        <p>Yes, appointments can be rescheduled with prior notice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+    
     <!-- Reviews -->
     <section id="reviews" class="section">
         <div class="container">
@@ -230,7 +262,20 @@
   }
 
   window.addEventListener("load", typeWriter);
+
+   function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
 </script>
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" />
+</div>
 
 </body>
 
