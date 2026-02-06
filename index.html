@@ -217,16 +217,13 @@
                     </div>
                 </div>
 
-               <div class="map">
-  <!-- Elegant action bar (shows in Instagram, looks like your buttons) -->
+<div class="map">
   <div class="map-toolbar" id="mapToolbar" style="display:none;">
-    <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=C-12%2C%20Main%20Road%2C%20Jaipur%2C%20Rajasthan"
-      target="_blank" rel="noopener">Open in Google Maps</a>
-    <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=C-12%2C%20Main%20Road%2C%20Jaipur%2C%20Rajasthan"
-      target="_blank" rel="noopener">Directions</a>
+    <a class="btn btn-primary"
+       href="https://www.google.com/maps/search/?api=1&query=C-12%2C%20Main%20Road%2C%20Jaipur%2C%20Rajasthan"
+       target="_blank" rel="noopener">Open in Google Maps</a>
   </div>
 
-  <!-- Map iframe (loads only on normal browsers, hidden on Instagram) -->
   <iframe
     id="mapFrame"
     title="Google Map"
@@ -235,6 +232,7 @@
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </div>
+
 
             </div>
         </div>
@@ -285,23 +283,23 @@
     document.getElementById("lightbox").style.display = "none";
   }
   (function () {
-    const ua = navigator.userAgent || "";
-    const isInstagram = ua.includes("Instagram");
-    const mapFrame = document.getElementById("mapFrame");
-    const mapToolbar = document.getElementById("mapToolbar");
+  const ua = navigator.userAgent || "";
+  const isInstagram = ua.includes("Instagram");
 
-    if (!mapFrame || !mapToolbar) return;
+  const mapFrame = document.getElementById("mapFrame");
+  const mapToolbar = document.getElementById("mapToolbar");
 
-    if (isInstagram) {
-      // Instagram blocks Google map iframes → hide iframe, show premium buttons
-      mapFrame.style.display = "none";
-      mapToolbar.style.display = "flex";
-    } else {
-      // Normal browsers → show map
-      mapFrame.style.display = "block";
-      mapToolbar.style.display = "none";
-    }
-  })();
+  if (!mapFrame || !mapToolbar) return;
+
+  if (isInstagram) {
+    mapFrame.style.display = "none";     // ✅ error wali cheez hide
+    mapToolbar.style.display = "flex";  // ✅ button show
+  } else {
+    mapFrame.style.display = "block";   // normal browser me map
+    mapToolbar.style.display = "none";
+  }
+})();
+
 </script>
 <!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
