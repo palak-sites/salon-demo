@@ -217,22 +217,21 @@
                     </div>
                 </div>
 
-               <!-- Map actions (Instagram fix) -->
-<div class="map-actions">
-  <a class="map-open"
-     href="https://www.google.com/maps?q=C-12,+Main+Road,+Jaipur,+Rajasthan"
-     target="_blank" rel="noopener">
-    Open in Google Maps
-  </a>
-</div>
+               <div class="map">
+  <!-- Elegant action bar (shows in Instagram, looks like your buttons) -->
+  <div class="map-toolbar" id="mapToolbar" style="display:none;">
+    <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=C-12%2C%20Main%20Road%2C%20Jaipur%2C%20Rajasthan"
+      target="_blank" rel="noopener">Open in Google Maps</a>
+    <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=C-12%2C%20Main%20Road%2C%20Jaipur%2C%20Rajasthan"
+      target="_blank" rel="noopener">Directions</a>
+  </div>
 
-<!-- Map embed -->
-<div class="map">
+  <!-- Map iframe (loads only on normal browsers, hidden on Instagram) -->
   <iframe
+    id="mapFrame"
     title="Google Map"
     src="https://www.google.com/maps?q=Jaipur%20Rajasthan&output=embed"
     loading="lazy"
-    allowfullscreen
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </div>
@@ -285,6 +284,24 @@
   function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
   }
+  (function () {
+    const ua = navigator.userAgent || "";
+    const isInstagram = ua.includes("Instagram");
+    const mapFrame = document.getElementById("mapFrame");
+    const mapToolbar = document.getElementById("mapToolbar");
+
+    if (!mapFrame || !mapToolbar) return;
+
+    if (isInstagram) {
+      // Instagram blocks Google map iframes → hide iframe, show premium buttons
+      mapFrame.style.display = "none";
+      mapToolbar.style.display = "flex";
+    } else {
+      // Normal browsers → show map
+      mapFrame.style.display = "block";
+      mapToolbar.style.display = "none";
+    }
+  })();
 </script>
 <!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
