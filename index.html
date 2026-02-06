@@ -299,12 +299,17 @@
     mapToolbar.style.display = "none";
   }
 })();
+document.getElementById("lightbox").addEventListener("click", function(e){
+  if(e.target.id === "lightbox") closeLightbox();
+});
 
 </script>
 <!-- Lightbox -->
-<div id="lightbox" onclick="closeLightbox()">
+<div id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
   <img id="lightbox-img" />
 </div>
+
 
 </body>
 
